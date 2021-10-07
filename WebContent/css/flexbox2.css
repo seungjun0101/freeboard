@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/* 태그 모양 바꾸기 */
+a.menu{/*추가  */
+    text-decoration: none;
+    color: white;
+}
+
+.container>li{
+    /* border: 1px solid rgb(90, 90, 38); */
+    list-style:none;
+    font-size: 1.5em;
+    padding: 8px 12px;
+    margin : 8px 12px;
+
+}
+
+/* hover 선택자는 마우스가 올라갔을때 */
+.container>li:hover{
+    background-color: #5eb8ff;
+    border-radius: 4px; /* 모서리 둥글게 */
+}
+.container{
+    background-color: #0288d1;
+    display: flex;
+    justify-content: center;
+    padding: 8px 12px;
+}
+/* 반응형으로 레이아웃 만들기
+해상도 최대 768px 까지 동작하도록 설정 */
+@media screen and (max-width:768px){
+    .container{
+        flex-direction: column;
+    }
+    .container>li{
+        text-align: center;
+    }
+}
+
+/*마진과 마진이 만났을 때 마지 상쇄경우  */
+html,body {
+    height: 100%;
+}
+.map_wrap {
+    display: flex;
+	flex-direction: column;
+	height: 100%;	
+}
+.footer {
+    border-top: 3px solid #0288d1;
+    font-size: 0.8 em;
+    margin-top: 10%;
+    padding-bottom: 5%;
+}
+.footer a,p {
+    font-size: 12px; /* 부모 태그인 footer 태그의 font-size를 지정해야 em을 사용할수있다. */
+    color:#005b9f;
+}
+#login{
+	margin-left: 10%;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 0.8em;
+}
